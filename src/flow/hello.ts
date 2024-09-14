@@ -7,11 +7,12 @@ const GREETING_KEYWORDS = ['hola', 'buenos días', 'buenas tardes', 'buenas noch
 export default BotWatsapp.addKeyword(BotWatsapp.EVENTS.WELCOME)
     .addAction(async (ctx, { flowDynamic, state }) => {
         try {
-            const currentState = state.getMyState() || {};
+            const currentState = state.getMyState() || {}; 
+        
             const newHistory = currentState.history || [];
             const name = ctx?.pushName ?? '';
             const userInput = ctx.body.toLowerCase();
-            
+
             console.log(`[HISTORY]:`, newHistory);
 
             // Verificar si es un saludo y si ya se ha saludado antes
