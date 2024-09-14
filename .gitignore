@@ -1,3 +1,4 @@
-/.env
-
+.env
 node_modules
+bot_sessions
+baileys.log
