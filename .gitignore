@@ -1,4 +1,6 @@
-.env
-node_modules
-bot_sessions
-baileys.log
+/.env
+/node_modules
+/bot_sessions
+/baileys.log
+/bot_sessions
+/bot.qr.png

@@ -1,5 +1,4 @@
-import { DIRECTIVES } from './directives/directives';
-import { DATA_BASE } from './data/data';
+
 
 const generatePrompt = (name: string): string => {
     const PROMPT = `
@@ -17,7 +16,7 @@ const generatePrompt = (name: string): string => {
     9. Después del saludo inicial, evita saludos o comentarios innecesarios.
     10. No reenvíes el formulario si ya fue enviado anteriormente. 
     11. Si el usuario pregunta qué es "Ojo con Eso", dale una breve explicación:
-       - "Ojo con Eso" es una app en desarrollo (37%) que permitirá a los ciudadanos reportar problemas comunitarios de forma anónima, mejorando la calidad de vida en la ciudad.
+       - "Ojo con Eso" es una app en Fase 2 Recoleccion de datos que permitirá a los ciudadanos reportar problemas comunitarios de forma anónima, mejorando la calidad de vida en la ciudad.
        - Con el apoyo de la comunidad, podremos finalizar la app y agregar funciones clave como:
          * Reporte anónimo de problemas
          * Mapa de incidencias en tiempo real
