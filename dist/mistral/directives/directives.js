@@ -1,4 +1,0 @@
-const DIRECTIVES = `
-
-`;
-export { DIRECTIVES };
