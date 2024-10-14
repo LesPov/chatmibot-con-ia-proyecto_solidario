@@ -3,7 +3,7 @@ import { Mistral } from '@mistralai/mistralai';
 import { generatePrompt } from './promp';
 
 const apiKey = process.env.MISTRAL_API_KEY;
-const client = new Mistral({ apiKey: apiKey });
+const client = new Mistral({ apiKey });
 //TODO:
 
 const mistralIntegration = async (name: string, history: any[]): Promise<string> => {
@@ -23,15 +23,15 @@ const mistralIntegration = async (name: string, history: any[]): Promise<string>
 
         return chatResponse.choices[0].message.content;
     } catch (error) {
+        console.error('Error detallado:', JSON.stringify(error, null, 2));
         console.error('[Mistral Error]:', error);
         return `Parece que hemos tenido un pequeño problema al procesar tu solicitud. 😕 No te preocupes, en unos minutos podrás volver a hablar con la IA. 
 
-Mientras tanto, puedes ayudarnos llenando este formulario. Más adelante, podrás experimentar con el chatbot inteligente y juntos mejoraremos el proceso.
-
-Aquí está el formulario para que lo completes y conozcas mejor qué es y para qué servirá "Ojo con Eso": 
-👉 https://docs.google.com/forms/d/e/1FAIpQLSeE0eJV3r6ISvMcx3zAxI-mNCtu6Zb_6Lf_ihs2NdsBRIEUHw/viewform?usp=sf_link
-
-¡Gracias por tu colaboración! 🙌`;
+        Mientras tanto, ¿qué te parece si nos ayudas a ir más allá de mirar y te unes a nuestra misión de denunciar? Puedes llenar este formulario para ser parte del cambio:
+        
+        👉 https://docs.google.com/forms/d/e/1FAIpQLSeE0eJV3r6ISvMcx3zAxI-mNCtu6Zb_6Lf_ihs2NdsBRIEUHw/viewform?usp=sf_link
+        
+        ¡Gracias por tu colaboración y por dar el paso de observador a agente de cambio! 🙌`;
     }
 };
 
