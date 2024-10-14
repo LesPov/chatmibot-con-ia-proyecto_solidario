@@ -1,4 +1,4 @@
 /.env
 /node_modules
-/bot_sessions
+bot_sessions
  

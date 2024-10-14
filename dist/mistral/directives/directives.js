@@ -1,0 +1,4 @@
+const DIRECTIVES = `
+
+`;
+export { DIRECTIVES };
